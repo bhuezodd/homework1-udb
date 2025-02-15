@@ -38,7 +38,7 @@ public class Tarea1 {
         
         do {
             System.out.println("---- Opciones ----");
-            System.out.println("1- Ingresar alumno");
+            System.out.println("1- Ingresar nuevo alumno");
             System.out.println("2- Buscar alumno por carnet");
             System.out.println("3- Elimar alumno por carnet");
             System.out.println("4- Mostrar todos los alumnos");
@@ -55,12 +55,12 @@ public class Tarea1 {
                 case 2:
                     secondOption();
                     break;
-                    
-                    
+                case 3:
+                    thirdOption();
+                    break;
                 case 4:
                     listStudents();
                     break;
-                    
                 case 5:
                     System.out.println(WARNING + "Adios, vuelve pronto!!" + RESET);
                     break;
@@ -74,7 +74,7 @@ public class Tarea1 {
     
     private static void firstOption() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("---- Ingresar alumno ----");
+        System.out.println("---- Ingresar nuevo alumno ----");
         
         String carnet;
         boolean isOk = false;
@@ -102,21 +102,63 @@ public class Tarea1 {
     
     private static void secondOption() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("---- Buscar alumno ----");
         
-       System.out.print("Ingrese carnet: ");
-       String carnet = scanner.nextLine();
-       
-       if (students.containsKey(carnet)) {
-            String name = students.get(carnet);
-           
-            System.out.println("Carnet: " + carnet);
-            System.out.println("Nombre completo: " + name);
-       } else {
-                System.out.println(ERROR + "“Alumno no encontrado, no se \n" +
-"puede Mostrar" + RESET);
-       }
+        boolean isDone = false;
+        do {
+            System.out.println("---- Buscar alumno por carnet ----");
+            System.out.print("Ingresar carnet (Vacio para salir): ");
+            String carnet = scanner.nextLine();
+            
+            if (carnet.isEmpty()) {
+                isDone = true;
+            } else {
+                if (students.containsKey(carnet)) {
+                     String name = students.get(carnet);
+
+                    System.out.println("+---------------------------------------+");
+                    System.out.println("Carnet: " + carnet);
+                    System.out.println("Nombre completo: " + name);
+
+                    System.out.println("+---------------------------------------+");
+                } else {
+                     System.out.println(ERROR + "“Alumno no encontrado, no se puede Mostrar" + RESET);
+                } 
+            }
+
+        } while(!isDone);
+    }
     
+    private static void thirdOption() {
+        Scanner scanner = new Scanner(System.in);
+        
+        boolean isDone = false;
+        do {
+            System.out.println("---- Eliminar alumno por carnet ----");
+            listStudents();
+        
+            System.out.print("Ingresar carnet (Vacio para salir): ");
+            String carnet = scanner.nextLine();
+            
+            if (carnet.isEmpty()) {
+                isDone = true;
+            } else {
+                if (students.containsKey(carnet)) {
+                    String name = students.get(carnet);
+                    
+                    // Estudiante removido
+                    students.remove(carnet);
+
+                    System.out.println(SUCCESS + "Alumno removido exitosamente" + RESET);
+                    System.out.println(SUCCESS + "+---------------------------------------+" + RESET);
+                    System.out.println(SUCCESS + "Carnet: " + carnet + RESET);
+                    System.out.println(SUCCESS + "Nombre completo: " + name + RESET);
+                    System.out.println(SUCCESS + "+---------------------------------------+" + RESET);
+                } else {
+                     System.out.println(ERROR + "Alumno no encontrado, no se puede Eliminar" + RESET);
+                } 
+            }
+        
+        } while(!isDone);
         
     }
     
