@@ -1,5 +1,9 @@
 
-## 1. Collection:
+# Foro 1
+
+# Investigacion
+
+## 1. Collection
 Definición:
 La interfaz "Collection" es la raíz de la jerarquía de colecciones en Java y es la base para otras estructuras como List, Set, y Queue.
 
@@ -90,3 +94,7 @@ public class MapExample {
 
 ```
 
+# Ejercicio 1
+
+Se requiere elaborar un programa que permita almacenar los estudiantes de UDB VIRTUAL de la 
+materia de Programación Orientada a objetos
