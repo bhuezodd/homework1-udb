@@ -14,17 +14,17 @@ import java.util.HashMap;
 public class ExampleMap {    
     public static void main(String[] args) {
         // Declaración de un Map
-        Map<String, String> estudiantes = new HashMap<>();
+        Map<Integer, String> estudiantes = new HashMap<>();
 
         // Asignación de valores
-        estudiantes.put("id1", "Juan");
-        estudiantes.put("id2", "María");
-        estudiantes.put("id3", "Pedro");
+        estudiantes.put(1, "Juan");
+        estudiantes.put(2, "María");
+        estudiantes.put(3, "Pedro");
 
         System.out.println("Estudiantes: " + estudiantes);
 
         // Eliminación de un valor por clave
-        estudiantes.remove("id2");
+        estudiantes.remove(2);
         System.out.println("Estudiantes después de eliminar la clave 2: " + estudiantes);
     }
 }
