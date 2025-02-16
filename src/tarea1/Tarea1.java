@@ -37,17 +37,17 @@ public class Tarea1 {
         Scanner scanner = new Scanner(System.in);
         
         do {
+            clearScreen();
             System.out.println("---- Opciones ----");
             System.out.println("1- Ingresar nuevo alumno");
             System.out.println("2- Buscar alumno por carnet");
             System.out.println("3- Elimar alumno por carnet");
             System.out.println("4- Mostrar todos los alumnos");
-            System.out.println("5- Exit");
+            System.out.println("5- Salir");
             
             System.out.print("Ingresa una opción: ");
             option = scanner.nextInt();
             
-            clearScreen();
             switch (option) {
                 case 1:
                     firstOption();
@@ -121,7 +121,7 @@ public class Tarea1 {
 
                     System.out.println("+---------------------------------------+");
                 } else {
-                     System.out.println(ERROR + "“Alumno no encontrado, no se puede Mostrar" + RESET);
+                     System.out.println(ERROR + "Alumno no encontrado, no se puede Mostrar" + RESET);
                 } 
             }
 
