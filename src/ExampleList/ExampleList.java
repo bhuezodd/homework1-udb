@@ -20,11 +20,12 @@ public class ExampleList {
         nombres.add("Carlos");
         nombres.add("Ana");
         nombres.add("Luis");
+        nombres.add("Ana");
 
         System.out.println("Nombres: " + nombres);
 
         // Eliminación de un valor por índice
-        nombres.remove(1);
+        nombres.remove(3);
         System.out.println("Nombres después de eliminar Ana: " + nombres);
     }
 }

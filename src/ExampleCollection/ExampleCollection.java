@@ -20,6 +20,7 @@ public class ExampleCollection {
         frutas.add("Manzana");
         frutas.add("Banana");
         frutas.add("Naranja");
+        frutas.add("Banana");
 
         System.out.println("Frutas: " + frutas);
 
