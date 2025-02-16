@@ -37,7 +37,6 @@ public class Tarea1 {
         Scanner scanner = new Scanner(System.in);
         
         do {
-            clearScreen();
             System.out.println("---- Opciones ----");
             System.out.println("1- Ingresar nuevo alumno");
             System.out.println("2- Buscar alumno por carnet");
@@ -47,6 +46,8 @@ public class Tarea1 {
             
             System.out.print("Ingresa una opción: ");
             option = scanner.nextInt();
+            
+            clearScreen();
             
             switch (option) {
                 case 1:
