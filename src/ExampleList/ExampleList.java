@@ -17,14 +17,15 @@ public class ExampleList {
         List<String> nombres = new ArrayList<>();
 
         // Asignación de valores
-        nombres.add("Carlos");
-        nombres.add("Ana");
-        nombres.add("Luis");
+        nombres.add("Carlos"); // 0
+        nombres.add("Ana"); // 1
+        nombres.add("Luis"); // 2
+        nombres.add("Ana"); // 3
 
         System.out.println("Nombres: " + nombres);
 
         // Eliminación de un valor por índice
-        nombres.remove(1);
+        nombres.remove(3);
         System.out.println("Nombres después de eliminar Ana: " + nombres);
     }
 }
