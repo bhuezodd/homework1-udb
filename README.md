@@ -5,7 +5,7 @@
 
 ## 1. Collection
 Definición:
-La interfaz "Collection" es la raíz de la jerarquía de colecciones en Java y es la base para otras estructuras como List, Set, y Queue.
+La interfaz Collection es la raíz de la jerarquía de colecciones en Java. Define operaciones generales que se aplican a todos los tipos de colecciones, como agregar, eliminar, y verificar elementos. Sin embargo, Collection no se implementa directamente; en su lugar, otras interfaces como List, Set y Queue heredan de ella.
 
 ### Ejemplo
 
@@ -35,7 +35,7 @@ public class CollectionExample {
 
 ## 2. List
 Definición:
-La interfaz "List" extiende Collection y permite elementos duplicados y acceso por índice.
+Una List es una colección ordenada que permite elementos duplicados. Se basa en un índice, lo que permite acceder a los elementos de manera secuencial o directa.
 
 ### Ejemplo
 
@@ -65,7 +65,7 @@ public class ListExample {
 
 ## 3. Map
 Definición:
-La interfaz "Map" almacena datos en pares clave -> valor y no permite claves duplicadas.
+Un Map es una colección que almacena pares clave-valor, donde cada clave es única y se usa para acceder a su valor asociado.
 
 ### Ejemplo
 
